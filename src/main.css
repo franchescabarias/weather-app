@@ -103,7 +103,6 @@ input {
 }
 
 
-
 .second-container {
     display: flex;
     justify-content: space-around;
@@ -213,3 +212,19 @@ img {
     margin: 0 auto;
 }
 
+.github-link {
+    text-align: center;
+    font-family: 'Varela Round';
+    color: #E3F5EF;
+    
+}
+
+.github:link {
+    color: #767978;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+}
+
+.github:hover {
+    color: #E3F5EF;
+}
