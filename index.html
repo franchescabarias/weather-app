@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/main.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><span id="city">New York</span>         
+      </h1>
+      <div class="search-container">
+        <form  id="search-form">
+          <label for="search"></label>
+          <input type="text" id="search-input" placeholder="Enter a city..." />
+          <input type="submit" class="search-button" value="Search">
+        
+        </form>
+      </div>
+      <section class="info">
+        <div class="first-container">
+          <p>
+            <span id="sunrise"
+              >Sunrise:
+              <br />
+              <span class="numbers">06:25</span>
+              <br />
+            </span>
+          </p>
+          <p class="date-and-time">
+            <span id="today"
+              > <span id="day">Thursday</span> <span id="time-now">16:00</span>
+              <br />
+            <img src="images/partly-cloudy-day.svg" alt="partly-cloudy" id="partly-cloudy">
+            </span>
+          </p>
+          <p>
+            <span id="sunset"
+              >Sunset
+              <br />
+              <span class="numbers">20:57</span>
+            </span>
+          </p>
+        </div>
+        <div class="second-container">
+          <div class="current-degrees">
+            <span id="temperature">19</span>
+            <div class="cel-fah"><a href="#" id="celcius">℃</a> | <a href="#" id="fahrenheit">F</a></div>
+          </div>
+          <div class="other-info">
+            <p id="other">Precipitation: <span class="numbers">65%</span></p>
+            <p id="other">Humidity: <span class="numbers">86%</span></p>
+            <p id="other">Wind: <span class="numbers">6 mph</span</p>
+          </div>
+        </div>
+      </section>
+      <section class="weather">
+        <div class="one">
+          <p id="day">Wed</p>
+          <img src="images/clear-day.svg" alt="sunny">
+          <p><span class="degrees">18℃</span></p>
+        </div>
+        <div class="two">
+          <p id="day">Thu</p>
+          <img src="images/clear-day.svg" alt="sunny">
+          <p><span class="degrees">15℃ </span></p>
+        </div>
+        <div class="three">
+          <p id="day">Fri</p>
+          <img src="images/partly-cloudy-day.svg" alt="sunny">
+          <p><span class="degrees">10℃</span></p>
+        </div>
+        <div class="fourth">
+          <p id="day">Sat</p>
+          <img src="images/partly-cloudy-day-drizzle.svg" alt="sunny">
+          <p><span class="degrees">12℃</span></p>
+        </div>
+        <div class="fifth">
+          <p id="day">Sun</p>
+          <img src="images/rain.svg" alt="sunny">
+          <p><span class="degrees">13℃</span></p>
+        </div>
+      </section>
+      
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
