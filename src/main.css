@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: #c0b59b;
+    background-color: #f4f7ff;
 }
 
 #city {
@@ -12,25 +12,15 @@ body {
     text-align: center;
     font-family: 'Varela Round';
     font-weight: bolder;
-    color: #E3F5EF;
+    color: #eeeff9;
     ;
 }
-
-#main-temp {
-    padding-top: 0.5em;
-    display: block;
-    text-align: center;
-    font-family: 'Varela Round';
-    font-size: 50px;
-    color: #fff;
-}
-
 
 input {
     width: 600px;
     margin-left: 3em;
     height: 40px;
-    background-color: #E3F5EF;
+    background-color: #eeeff9;
     color: #455654;
     border-radius: 10px;
     border-color: transparent;
@@ -45,7 +35,7 @@ input {
     margin-top: 8em;
     height: 690px;
     max-width: 900px;
-    background-image: linear-gradient(to top, #DECBA4, #3E5151);
+    background-color: #666bd0;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     border-radius: 30px;
 }
@@ -53,13 +43,11 @@ input {
 .search-container {
     display: inline;
     text-align: center;
-
 }
 
 
 .search-form {
     display: inline;
-
 }
 
 .search-button {
@@ -71,7 +59,7 @@ input {
     font-family: 'Varela Round';
     margin-left: 1em;
     border-radius: 10px;
-    background-color: #E3F5EF;
+    background-color: #eeeff9;
     font-weight: bold;
     transition: all 200ms ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -103,6 +91,7 @@ input {
 }
 
 
+
 .second-container {
     display: flex;
     justify-content: space-around;
@@ -114,7 +103,11 @@ input {
     justify-content: space-between;
     font-size: 70px;
     margin-top: 0.5em;
-    color: #E3F5EF;
+    color: #efbf3e;
+}
+
+#current-day {
+    color: #eeeff9;
 }
 
 .cel-fah {
@@ -125,13 +118,13 @@ input {
 #fahrenheit {
     text-decoration: none;
     font-family: 'Varela Round';
-    color: #E3F5EF;
+    color: #efbf3e;
     transition: 200ms all ease-in-out;
 }
 
 #celcius:hover,
 #fahrenheit:hover {
-    color: #979797;
+    color: #E3F5EF;
     font-family: 'Varela Round';
 }
 
@@ -153,13 +146,8 @@ input {
     color: #bab4b4;
 }
 
-
-#current-day {
-    color: #000000;
-}
-
 .numbers {
-    color: #E3F5EF;
+    color: #eeeff9;
 }
 
 #other {
@@ -190,14 +178,18 @@ input {
 }
 
 .degrees {
-    color: #E3F5EF;
+    color: #efbf3e;
     font-family: 'Varela Round';
     font-size: 19px;
     position: relative;
 }
 
 #day {
-    color: #bab4b4;
+    color:#bab4b4;
+}
+
+#time-now {
+    color:#E3F5EF;
 }
 
 img {
@@ -212,19 +204,3 @@ img {
     margin: 0 auto;
 }
 
-.github-link {
-    text-align: center;
-    font-family: 'Varela Round';
-    color: #E3F5EF;
-    
-}
-
-.github:link {
-    color: #767978;
-    text-decoration: none;
-    transition: all 200ms ease-in-out;
-}
-
-.github:hover {
-    color: #E3F5EF;
-}
