@@ -21,31 +21,16 @@
         </form>
       </div>
       <section class="info">
-        <div class="first-container">
+        <div class="second-container">
+          <div class="first-container">
           <p>
-            <span id="sunrise"
-              >Sunrise:
-              <br />
-              <span class="numbers">06:25</span>
-              <br />
-            </span>
-          </p>
-          <p class="date-and-time">
             <span id="today"
-              > <span id="day">Thursday</span> <span id="time-now">16:00</span>
+              > <span id="current-day">Thursday</span> <span id="time-now">16:00</span>
               <br />
-            <img src="images/partly-cloudy-day.svg" alt="partly-cloudy" id="partly-cloudy">
-            </span>
-          </p>
-          <p>
-            <span id="sunset"
-              >Sunset
-              <br />
-              <span class="numbers">20:57</span>
+            <img src="images/sun.gif" alt="partly-cloudy" id="partly-cloudy">
             </span>
           </p>
         </div>
-        <div class="second-container">
           <div class="current-degrees">
             <span id="temperature">19</span>
             <div class="cel-fah"><a href="#" id="celcius">℃</a> | <a href="#" id="fahrenheit">F</a></div>
@@ -60,31 +45,36 @@
       <section class="weather">
         <div class="one">
           <p id="day">Wed</p>
-          <img src="images/clear-day.svg" alt="sunny">
+          <img src="images/sun.gif" alt="sunny">
           <p><span class="degrees">18℃</span></p>
         </div>
         <div class="two">
           <p id="day">Thu</p>
-          <img src="images/clear-day.svg" alt="sunny">
+          <img src="images/cloudy.gif" alt="sunny">
           <p><span class="degrees">15℃ </span></p>
         </div>
         <div class="three">
           <p id="day">Fri</p>
-          <img src="images/partly-cloudy-day.svg" alt="sunny">
+          <img src="images/cloudy.gif" alt="sunny">
           <p><span class="degrees">10℃</span></p>
         </div>
         <div class="fourth">
           <p id="day">Sat</p>
-          <img src="images/partly-cloudy-day-drizzle.svg" alt="sunny">
+          <img src="images/wind.gif" alt="sunny">
           <p><span class="degrees">12℃</span></p>
         </div>
         <div class="fifth">
           <p id="day">Sun</p>
-          <img src="images/rain.svg" alt="sunny">
+          <img src="images/rain.gif" alt="sunny">
           <p><span class="degrees">13℃</span></p>
         </div>
       </section>
-      <div class="github-link"><a class="github" href="https://github.com/chescab/weather-app">Open-source code</a> by Franchesca Barias</div>
+      <footer class="footer"> 
+        <p>This is open-source on 
+          <a id="github" href="https://github.com/chescab/weather-app">
+          Github</a> and hosted on <a id="netlify" href="url">
+            Netlify</a> </p>
+      </footer>
     </div>
     <script src="src/app.js"></script>
   </body>
