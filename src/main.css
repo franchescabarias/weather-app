@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: #f4f7ff;
+    background-color: #e4efef;
 }
 
 #city {
@@ -12,31 +12,28 @@ body {
     text-align: center;
     font-family: 'Varela Round';
     font-weight: bolder;
-    color: #eeeff9;
-    ;
+    color: #212121;
 }
 
 input {
-    width: 600px;
+    width: 530px;
     margin-left: 3em;
-    height: 40px;
+    height: 48px;
     background-color: #eeeff9;
     color: #455654;
     border-radius: 10px;
     border-color: transparent;
     font-size: 20px;
     font-family: 'Varela Round';
-    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
 }
 
 .container {
     display: block;
     margin: 0 auto;
     margin-top: 8em;
-    height: 690px;
+    height: 680px;
     max-width: 900px;
-    background-color: #666bd0;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background-color: #ffffff;
     border-radius: 30px;
 }
 
@@ -51,15 +48,15 @@ input {
 }
 
 .search-button {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
-    color: #455654;
-    height: 50px;
-    width: 150px;
+    color: #ffffff;
+    height: 53px;
+    width: 140px;
     font-family: 'Varela Round';
     margin-left: 1em;
     border-radius: 10px;
-    background-color: #eeeff9;
+    background-color: #33cccc;
     font-weight: bold;
     transition: all 200ms ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -72,7 +69,7 @@ input {
 
 .info {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-left: 4.5em;
     margin-top: 1em;
     font-family: 'Varela Round';
@@ -84,18 +81,15 @@ input {
 .first-container {
     display: flex;
     justify-content: space-evenly;
-    width: 380px;
     height: 130px;
     border-radius: 3px;
 
 }
 
-
-
 .second-container {
     display: flex;
     justify-content: space-around;
-    width: 350px;
+    width: 700px;
 }
 
 .current-degrees {
@@ -103,61 +97,7 @@ input {
     justify-content: space-between;
     font-size: 70px;
     margin-top: 0.5em;
-    color: #efbf3e;
-}
-
-#current-day {
-    color: #eeeff9;
-}
-
-.cel-fah {
-    font-size: 18px;
-}
-
-#celcius,
-#fahrenheit {
-    text-decoration: none;
-    font-family: 'Varela Round';
-    color: #efbf3e;
-    transition: 200ms all ease-in-out;
-}
-
-#celcius:hover,
-#fahrenheit:hover {
-    color: #E3F5EF;
-    font-family: 'Varela Round';
-}
-
-#today {
-    font-size: 30px;
-    color: #E3F5EF;
-    font-weight: bolder;
-    margin: 0 auto;
-    display: block;
-    margin-top: 13px;
-}
-
-#sunrise,
-#sunset {
-    font-size: 15px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 5em;
-    color: #bab4b4;
-}
-
-.numbers {
-    color: #eeeff9;
-}
-
-#other {
-    color: #bab4b4;
-}
-.date {
-    font-size: 25px;
-    color: #757575;
-    display: block;
-    margin-top: 0.7em;
+    color: #272142;
 }
 
 .other-info {
@@ -166,30 +106,100 @@ input {
     color: #757575;
 }
 
+#current-day {
+    color: #33cccc;
+}
+
+#current-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.current-weather {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#description {
+    text-align: center;
+    text-transform: capitalize;
+    color: #272142;
+    font-size: 30px;
+    padding-top: 0.5em;
+}
+
+.cel-fah {
+    font-size: 18px;
+    color: #272142;
+}
+
+#celcius,
+#fahrenheit {
+    text-decoration: none;
+    font-family: 'Varela Round';
+    color: #272142;
+    transition: 200ms all ease-in-out;
+}
+
+#celcius:hover,
+#fahrenheit:hover {
+    color: #33cccc;
+    font-family: 'Varela Round';
+}
+
+#today {
+    font-size: 30px;
+    color: #272142;
+    font-weight: bolder;
+    margin: 0 auto;
+    display: block;
+    margin-top: 13px;
+}
+
+.numbers {
+    color: #a9a6b3;
+}
+
+.other {
+    color: #33cccc;
+}
+
+#humidity {
+    color: #a9a6b3;
+}
+
+#wind {
+    color: #a9a6b3;
+}
+
 .weather {
     display: flex;
     justify-content: space-around;
-    padding: 2em;
-    padding-top: 3em;
+    padding: 1.5em;
+    padding-top: 1em;
     text-align: center;
     font-family: 'Varela Round';
     font-weight: lighter;
     color: #757575;
+    /* border: solid brown 2px; */
+    height: 150px;
+    width: 700px;
+    margin: 0 auto;
 }
 
 .degrees {
-    color: #efbf3e;
+    color: #33cccc;
     font-family: 'Varela Round';
     font-size: 19px;
     position: relative;
 }
 
 #day {
-    color:#bab4b4;
+    color: #a9a6b3;
 }
 
 #time-now {
-    color:#E3F5EF;
+    color: #33cccc;
 }
 
 img {
@@ -204,3 +214,20 @@ img {
     margin: 0 auto;
 }
 
+.footer {
+    font-family: 'Varela Round';
+    text-align: center;
+    color: #a9a6b3;
+    text-decoration: none;
+    padding-top: 3em;
+}
+
+#github {
+    text-decoration: none;
+    color: #33cccc;
+}
+
+#netlify {
+    text-decoration: none;
+    color: #33cccc;
+}
