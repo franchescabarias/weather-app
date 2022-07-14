@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <h1><span id="city">New York</span>         
+      <h1><span id="city">New York</span>    
       </h1>
       <div class="search-container">
         <form  id="search-form">
@@ -27,7 +27,10 @@
             <span id="today"
               > <span id="current-day">Thursday</span> <span id="time-now">16:00</span>
               <br />
-            <img src="images/sun.gif" alt="partly-cloudy" id="partly-cloudy">
+            </span>
+            <span class="current-weather">
+              <span id="description"></span>
+              <img id="current-icon" src="images/sun.gif" alt="sunny">
             </span>
           </p>
         </div>
@@ -36,9 +39,8 @@
             <div class="cel-fah"><a href="#" id="celcius">℃</a> | <a href="#" id="fahrenheit">F</a></div>
           </div>
           <div class="other-info">
-            <p id="other">Precipitation: <span class="numbers">65%</span></p>
-            <p id="other">Humidity: <span class="numbers">86%</span></p>
-            <p id="other">Wind: <span class="numbers">6 mph</span</p>
+            <p class="other">Humidity: <span id="humidity"></span><span class="numbers">%</span></span></p>
+            <p class="other">Wind: <span id="wind"></span><span class="numbers"> km/h</span></span></p>
           </div>
         </div>
       </section>
