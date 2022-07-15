@@ -29,39 +29,30 @@ function formatDate() {
 // let currentDay = document.querySelector('#day');
 // currentDay.innerHTML = `${formatDate()}`;
 
+let currentCity = document.querySelector('#search-form');
+currentCity.addEventListener('submit', function searchCity(e) {
+  e.preventDefault();
+  const apiKey = "d9a1ffbb13c0cf12ce582064cf96a4eb";
+  let city = document.querySelector('#search-input').value;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+  axios.get(apiUrl).then(showTemperature);
+});
+
+let apiKey = "d9a1ffbb13c0cf12ce582064cf96a4eb";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=48.8566&lon=2.3522&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(showTemperature);
+
 function showTemperature(response) {
-  console.log(response.data);
-  let temperatureElement = document.querySelector('#temperature');
-  let cityElement = document.querySelector('#city');
+  document.querySelector('#city').innerHTML = response.data.name;
+  document.querySelector('#temperature').innerHTML = Math.round(response.data.main.temp);
   let descriptionElement = document.querySelector('#description');
   let humidityElement = document.querySelector('#humidity');
   let windElement = document.querySelector('#wind');
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
-  cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
 };
-
-function search(city) {
-  let apiKey = "d9a1ffbb13c0cf12ce582064cf96a4eb";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=40.730610&lon=-73.935242&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
-}
-
-let apiKey = "d9a1ffbb13c0cf12ce582064cf96a4eb";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=40.730610&lon=-73.935242&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(showTemperature);
-
-function handleSubmit(e) {
-  e.preventDefault();
-  let cityInputElement = document.querySelector('#search-input');
-  search(cityInputElement.value);
-}
-
-let form = document.querySelector('#search-form');
-form.addEventListener("submit", handleSubmit);
 
 let fahrenheit = document.querySelector('#fahrenheit');
 fahrenheit.addEventListener('click', function convertToFahrenheit(e) {
