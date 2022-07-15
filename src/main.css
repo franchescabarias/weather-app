@@ -176,12 +176,11 @@ input {
     display: flex;
     justify-content: space-around;
     padding: 1.5em;
-    padding-top: 1em;
+    padding-top: 2.5em;
     text-align: center;
     font-family: 'Varela Round';
     font-weight: lighter;
     color: #757575;
-    /* border: solid brown 2px; */
     height: 150px;
     width: 700px;
     margin: 0 auto;
@@ -219,7 +218,7 @@ img {
     text-align: center;
     color: #a9a6b3;
     text-decoration: none;
-    padding-top: 3em;
+    padding-top: 2.5em;
 }
 
 #github {
