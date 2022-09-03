@@ -26,8 +26,9 @@ function formatDate() {
   return day;
 };
 
-// let currentDay = document.querySelector('#day');
-// currentDay.innerHTML = `${formatDate()}`;
+let currentDay = document.querySelector('#current-day');
+currentDay.innerHTML = `${formatDate()}`;
+
 
 let currentCity = document.querySelector('#search-form');
 currentCity.addEventListener('submit', function searchCity(e) {
@@ -38,21 +39,26 @@ currentCity.addEventListener('submit', function searchCity(e) {
   axios.get(apiUrl).then(showTemperature);
 });
 
-let apiKey = "d9a1ffbb13c0cf12ce582064cf96a4eb";
+const apiKey = "d9a1ffbb13c0cf12ce582064cf96a4eb";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=48.8566&lon=2.3522&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(showTemperature);
 
 function showTemperature(response) {
+  console.log(response.data);
   document.querySelector('#city').innerHTML = response.data.name;
   document.querySelector('#temperature').innerHTML = Math.round(response.data.main.temp);
   let descriptionElement = document.querySelector('#description');
   let humidityElement = document.querySelector('#humidity');
   let windElement = document.querySelector('#wind');
+  let iconElement = document.querySelector('#current-icon');
 
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 };
+
+
 
 let fahrenheit = document.querySelector('#fahrenheit');
 fahrenheit.addEventListener('click', function convertToFahrenheit(e) {
