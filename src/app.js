@@ -57,8 +57,7 @@ function displayForecast(response) {
 
   let forecastHTML = "";
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
-      let temperature = (forecastDay.temp.max);
+    if (index < 5) {
       forecastHTML = forecastHTML + `
       <div class="one">
         <p id="day">${formatDay(forecastDay.dt)}</p>
