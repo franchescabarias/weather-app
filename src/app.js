@@ -43,20 +43,29 @@ const apiKey = "d9a1ffbb13c0cf12ce582064cf96a4eb";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=48.8566&lon=2.3522&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(showTemperature);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+
+  return days[day];
+}
 
 function displayForecast(response) {
-  console.log(response.data);
+  let forecast = (response.data.daily);
   let forecastElement = document.querySelector('#forecast');
 
   let forecastHTML = "";
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-  days.forEach(function (day) {
-    forecastHTML = forecastHTML + `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      let temperature = (forecastDay.temp.max);
+      forecastHTML = forecastHTML + `
       <div class="one">
-        <p id="day">${day}</p>
-        <img src="images/sun.gif" alt="sunny">
-        <p><span class="degrees">18℃</span></p>
+        <p id="day">${formatDay(forecastDay.dt)}</p>
+        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="sunny">
+        <p><span class="degrees">${Math.round(forecastDay.temp.max)}℃</span></p>
       </div>`
+    }
   });
   forecastElement.innerHTML = forecastHTML;
 };
