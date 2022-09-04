@@ -44,23 +44,8 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=48.8566&lon=2.
 axios.get(apiUrl).then(showTemperature);
 
 
-function showTemperature(response) {
-  document.querySelector('#city').innerHTML = response.data.name;
-  document.querySelector('#temperature').innerHTML = Math.round(response.data.main.temp);
-  let descriptionElement = document.querySelector('#description');
-  let humidityElement = document.querySelector('#humidity');
-  let windElement = document.querySelector('#wind');
-  let iconElement = document.querySelector('#current-icon');
-
-
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+function displayForecast(response) {
   console.log(response.data);
-};
-
-function displayForecast() {
   let forecastElement = document.querySelector('#forecast');
 
   let forecastHTML = "";
@@ -76,8 +61,29 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 };
 
-displayForecast();
+function getForecast(coordinates) {
+  const apiKey = "d9a1ffbb13c0cf12ce582064cf96a4eb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
+function showTemperature(response) {
+  document.querySelector('#city').innerHTML = response.data.name;
+  document.querySelector('#temperature').innerHTML = Math.round(response.data.main.temp);
+  let descriptionElement = document.querySelector('#description');
+  let humidityElement = document.querySelector('#humidity');
+  let windElement = document.querySelector('#wind');
+  let iconElement = document.querySelector('#current-icon');
+
+
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  getForecast(response.data.coord)
+};
 
 let fahrenheit = document.querySelector('#fahrenheit');
 fahrenheit.addEventListener('click', function convertToFahrenheit(e) {
