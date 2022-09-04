@@ -2,9 +2,7 @@
 
 
 body {
-    background-image: url(/images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(/images/jeremy-bezanger-Ismh7gmABAc-unsplash.jpg)
 }
 
 #city {
@@ -19,7 +17,7 @@ body {
 
 input {
     width: 530px;
-    margin-left: 3em;
+    margin-left: 1em;
     height: 48px;
     background-color: #eeeff9;
     color: #455654;
@@ -29,14 +27,19 @@ input {
     font-family: 'Varela Round';
 }
 
+hr {
+    width: 700px;
+    color: #eeeff9;
+    margin-top: 4em;
+}
 .container {
     display: block;
     margin: 0 auto;
     margin-top: 8em;
-    height: 680px;
+    height: 690px;
     max-width: 900px;
-    background-color: rgba(24,24,27, 0.6);
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    background-color: rgba(55, 63, 54, 0.6);
+    box-shadow: rgba(71, 170, 94, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     border-radius: 10px;
     
 }
@@ -115,8 +118,8 @@ input {
 }
 
 #current-icon {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
 }
 
 .current-weather {
@@ -180,15 +183,14 @@ input {
     color: #a9a6b3;
 }
 
-.weather {
+#forecast {
     display: flex;
     justify-content: space-around;
-    padding: 1.5em;
-    padding-top: 2.5em;
     text-align: center;
     font-family: 'Varela Round';
     font-weight: lighter;
     color: #757575;
+    padding-top: 2em;
     height: 150px;
     width: 700px;
     margin: 0 auto;
@@ -221,20 +223,4 @@ img {
     margin: 0 auto;
 }
 
-.footer {
-    font-family: 'Varela Round';
-    text-align: center;
-    color: #a9a6b3;
-    text-decoration: none;
-    padding-top: 2.5em;
-}
 
-#github {
-    text-decoration: none;
-    color: #eeeff9;
-}
-
-#netlify {
-    text-decoration: none;
-    color: #eeeff9;
-}
