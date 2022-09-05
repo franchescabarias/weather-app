@@ -188,7 +188,6 @@ hr {
     text-align: center;
     font-family: 'Varela Round';
     font-weight: lighter;
-    color: #757575;
     padding-top: 2em;
     height: 150px;
     width: 700px;
@@ -207,7 +206,7 @@ hr {
 }
 
 #day {
-    color: #a9a6b3;
+    color: #eeeff9;
     font-size: 15px;
 }
 
