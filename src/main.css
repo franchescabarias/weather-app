@@ -2,7 +2,7 @@
 
 
 body {
-    background-image: url(/images/jeremy-bezanger-Ismh7gmABAc-unsplash.jpg)
+    background-image: url(/images/background.jpg);
 }
 
 #city {
@@ -36,10 +36,9 @@ hr {
     display: block;
     margin: 0 auto;
     margin-top: 8em;
-    height: 690px;
+    height: 700px;
     max-width: 900px;
-    background-color: rgba(55, 63, 54, 0.6);
-    box-shadow: rgba(71, 170, 94, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 10px;
     
 }
@@ -57,7 +56,7 @@ hr {
 .search-button {
     font-size: 17px;
     font-weight: bold;
-    color: #000000;
+    color: #ec6e4c;
     height: 53px;
     width: 140px;
     font-family: 'Varela Round';
@@ -118,8 +117,8 @@ hr {
 }
 
 #current-icon {
-    height: 70px;
-    width: 70px;
+    height: 65px;
+    width: 65px;
 }
 
 .current-weather {
@@ -154,7 +153,7 @@ hr {
 
 #celcius:hover,
 #fahrenheit:hover {
-    color: #33cccc;
+    color: #ec6e4c;
     font-family: 'Varela Round';
 }
 
@@ -168,7 +167,7 @@ hr {
 }
 
 .numbers {
-    color: #a9a6b3;
+    color: #ec6e4c;
 }
 
 .other {
@@ -176,11 +175,11 @@ hr {
 }
 
 #humidity {
-    color: #a9a6b3;
+    color: #ec6e4c;
 }
 
 #wind {
-    color: #a9a6b3;
+    color: #ec6e4c;
 }
 
 #forecast {
@@ -199,28 +198,49 @@ hr {
 .degrees {
     color: #eeeff9;
     font-family: 'Varela Round';
-    font-size: 19px;
+    font-size: 15px;
     position: relative;
+}
+
+#min {
+    color: #a5a6ad;
 }
 
 #day {
     color: #a9a6b3;
+    font-size: 15px;
 }
 
 #time-now {
     color: #eeeff9;
 }
 
-img {
-    margin: 0;
-    width: 80px;
-    height: 80px;
+.min-max {
+    display: flex;
+    justify-content: space-between;
 }
 
-#partly-cloudy {
+footer {
     text-align: center;
-    display: block;
-    margin: 0 auto;
+    font-family: 'Varela Round';
+    color: #eeeff9;
 }
 
+#github {
+    color: #ec6e4c;
+    transition: 200ms all ease-in-out;
+}
+
+#github:hover {
+    color: #eeeff9;
+}
+
+#netlify {
+    color: #ec6e4c;
+    transition: 200ms all ease-in-out;
+}
+
+#netlify:hover {
+    color: #eeeff9;
+}
 
