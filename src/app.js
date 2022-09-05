@@ -62,7 +62,10 @@ function displayForecast(response) {
       <div class="one">
         <p id="day">${formatDay(forecastDay.dt)}</p>
         <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="sunny">
+        <div class="min-max">
+        <p><span class="degrees" id="min">${Math.round(forecastDay.temp.min)}℃</span></p>
         <p><span class="degrees">${Math.round(forecastDay.temp.max)}℃</span></p>
+        </div>
       </div>`
     }
   });
